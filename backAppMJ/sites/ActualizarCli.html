@@ -1,0 +1,57 @@
+<div class="row ">
+	<div class="col-2" id="colPanel">
+		<div header class="column">
+		</div>
+	</div>
+	<div class="col-10">
+		<div main class="column">
+		</div>
+		<div class="column columnList">
+			<div class="row">
+                <div class="col-12" >
+                    <h3>Servicios Encontrados: {{ recibeServ.length | number }}</h3>
+                    <ul id="listCli" class="list-group list-group-flush">
+                        <li class="list-group-item" ng-repeat="getServ in recibeServ">
+                            <div class="row">
+                                <div class="col-xl-4">
+                                    <p>{{getServ.nameServ}}</p>
+                                    <p>{{getServ.nameCol}}</p>
+                                </div>
+                                <div class="col-xl-8">
+                                    <div >
+                                        <!-- <span id="fecha">{{CurrentDate | date:'dd-MM-yyyy'}}</span> -->
+                                        <span id="fecha">Fecha</span>
+                                    </div>
+                                    <i class='fas fa-pencil-alt' data-toggle="collapse" data-target="#{{getServ.nameCol}}">
+                                        <div id="{{getServ.nameCol}}" class="collapse">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.
+                                        </div>
+                                    </i>
+                                    <i class="fa fa-eye" aria-hidden="true" data-toggle="collapse" data-target="#eye1">
+                                        <div id="eye1" class="collapse">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                            dolore magna
+                                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.
+                                        </div>
+                                    </i>
+                                    <i class="fa fa-trash" aria-hidden="true" data-toggle="collapse" data-target="#trash1">
+                                        <div id="trash1" class="collapse">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                            dolore magna
+                                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.
+                                        </div>
+                                    </i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <br>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>

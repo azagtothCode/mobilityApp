@@ -1,0 +1,106 @@
+<div class="row">
+	<div class="col-2" id="colPanel">
+		<div header class="column">
+		</div>
+	</div>
+	<div class="col-10">
+		<div main class="column">
+		</div>
+		<div class="column columnList">
+			<div class="row">
+                <div class="col-12" >
+                    <h3>Servicios Encontrados: {{(serV|filter: searchText).length}}</h3>
+                    <div class="row">
+                        <div class="col-3">
+                            <h3>Filtrar búsqueda por:</h3>
+
+                        </div>
+                        <div class="col-9">
+                            <select class="custom-select" ng-model="searchText">
+                                <option value="">Elija una opción...</option>
+                                <option value="Tecnologia">Tecnología</option>
+                                <option value="Hogar">Hogar</option>
+                                <option value="Automotriz">Automotriz</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div style="padding:10px;" class="col-sm-6" ng-repeat="serV in serV | filter:searchText">
+                          <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title">{{serV.nameServ}}</h5>
+                              <p class="card-text">
+                                Categoria / {{serV.catSer}}<br>
+                                Costo / {{serV.servCosto}}<br>
+                                Tipo de pago / {{serV.servPay}}<br>
+                                Zona / {{serV.nameZone}}<br>
+                            </p>
+                            <div class="row">
+                                <div class="col-6">
+                                    <a style="width:100%;" href="#!SolicitarCli" class="btn btn-info " >Modificar</a>
+                                </div>
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                                        Eliminar
+                                    </button>  
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Eliminar servicio</h5>
+                                        </div>
+
+                                            <div class="modal-body">
+                                            ¿Esta seguro que desa eliminar su servicio?<br>Esta acción no se podra deshacer
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger">Eliminar</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                                
+                            </div>
+                            <div class="card-footer text-muted">
+                                Hace 2 horas
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- <ul id="listClie"  class="list-group list-group-flush">
+  
+                        <li class="list-group-item" ng-repeat="serV in serV | filter:searchText">
+                            <div class="alert alert-{{serV.statusServ}}" role="alert">
+                                <div class="row">
+                                    <div class="col-xl-10">
+                                        <p>{{serV.nameServ}}</p>
+                                        <p>{{serV.nameCol}}</p>
+                                    </div>
+                                    <div class="col-xl-2">
+                                        <div ng-init="Status='Terminado'" ng-if="serV.statusServ=='success'">
+                                            <p ng-bind="Status"></p>
+                                        </div>
+                                        <div ng-init="Status='Pendiente'" ng-if="serV.statusServ=='warning'">
+                                            <p ng-bind="Status"></p>
+                                        </div>
+                                        <div ng-init="Status='Cancelado'" ng-if="serV.statusServ=='danger'">
+                                            <p ng-bind="Status"></p>
+                                        </div>
+                                    </div>
+            
+                                </div>
+                            </div>
+                        </li>
+                    </ul> -->
+
+                </div>
+			</div>
+		</div>
+	</div>
+</div>

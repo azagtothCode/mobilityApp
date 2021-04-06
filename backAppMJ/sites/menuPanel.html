@@ -1,0 +1,70 @@
+<div class="column">
+    <div ng-if="user.mobUsersType == 'COL'">
+        <div id="textPanel" class="column" >
+            <img id="imgCliPan" class="rounded-circle"  src="imgs/male.png">
+        </div>
+        <div id="textPanel" class="column" >
+            <span >{{user.mobUsersName}} {{user.mobUsersApp}} {{user.mobUsersApm}}</span>
+        </div>
+        <!-- <div id="textPanel" class="column">
+            <span >Estrelas</span>
+        </div> -->
+        <div id="menuPanel" class="column">
+            <div >
+                <a href="#!home" >
+                    <span class="fa fa-th-large"></span>
+                    <span class="xn-text"> Tablero Principal</span>
+                </a><br><br>
+                <a href="#" >
+                    <span class="fa fa-user"></span>
+                    <span class="xn-text">Editar Perfil</span>
+                </a><br><br>
+                <a href="pdf/help.pdf" target="_blank">
+                    <span class="fa fa-question-circle"></span> 
+                    <span class="xn-text">Ayuda</span>
+                </a><br><br>
+                <a  ng-click="logout()">
+                    <span class="fa fa-sign-out-alt"></span> 
+                    <span class="xn-text">Cerrar Sesion</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div ng-if="user.mobUsersType == 'CLI'">
+        <div id="textPanel" class="column" >
+            <img id="imgCliPan" class="rounded-circle"  src="imgs/male.png">
+        </div>
+        <div id="textPanel" class="column" >
+            <span >{{user.mobUsersName}} {{user.mobUsersApp}} {{user.mobUsersApm}} {{user.mobUsersType}}</span>
+        </div>
+        <!-- <div id="textPanel" class="column">
+            <span >Estrelas</span>
+        </div> -->
+        <div id="textPanel" class="column">
+            <span >Servicios Contratados: {{(serV|filter: 'success').length}}</span>
+            
+        </div>
+        <div id="menuPanel" class="column">
+            <div >
+                <a href="#!home" >
+                    <span class="fa fa-th-large"></span>
+                    <span class="xn-text"> Tablero Principal</span>
+                </a><br><br>
+                <a href="#" >
+                    <span class="fa fa-user"></span>
+                    <span class="xn-text">Editar Perfil</span>
+                </a><br><br>
+                <a href="pdf/help.pdf" target="_blank">
+                    <span class="fa fa-question-circle"></span> 
+                    <span class="xn-text">Ayuda</span>
+                </a><br><br>
+                <a  ng-click="logout()">
+                    <span class="fa fa-sign-out-alt"></span> 
+                    <span class="xn-text">Cerrar Sesion</span>
+                </a>
+            </div>
+        </div>
+    </div>  
+
+    
+</div>

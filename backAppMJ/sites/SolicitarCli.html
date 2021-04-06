@@ -1,0 +1,93 @@
+<div class="row">
+	<div class="col-2" id="colPanel">
+		<div header class="column">
+		</div>
+	</div>
+	<div class="col-10" >
+		<div main class="column">
+
+		</div>
+		<div class="column">
+			<form style="padding:20px;">
+				<div class="form-group">
+					<label for="exampleInputCategoria">Filtrar Categoria</label>
+					<select class="form-control" ng-model="searchCat" id="exampleInputCategoria">
+						<option value="">Elija una opción...</option>
+						<option value="Tecnologia">Tecnología</option>
+						<option value="Hogar">Hogar</option>
+						<option value="Automotriz">Automotríz</option>
+					</select>
+				</div>
+				<div class="form-group">
+				  <label for="exampleInputEmail1">Nombre de su servicio</label>
+				  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+				</div>
+				<div class="form-group">
+					<label for="exampleInputEmail1">Costo de su servicio</label>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+						  <span class="input-group-text">$</span>
+						</div>
+						<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+						<div class="input-group-append">
+						  <span class="input-group-text">.00</span>
+						</div>
+					  </div>
+				</div>
+				<div class="form-group">
+					<label for="exampleInputCategoria">Tipo de Pago</label>
+					<select class="form-control" ng-model="searchPay" id="exampleInputPay">
+						<option value="">Elija una opción...</option>
+						<option value="Tecnologia">Tarjeta</option>
+						<option value="Hogar">Transferencia</option>
+						<option value="Automotriz">Efectivo</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="exampleInputCategoria">Zona(s) donde ofrece sus servicios</label>
+					<select class="form-control" ng-model="searchZone" id="exampleInputZone">
+						<option value="">Elija una opción...</option>
+						<option value="Tecnologia">Atizapan de Zaragoza</option>
+						<option value="Tecnologia">Benito Juarez</option>
+						<option value="Hogar">Iztapalapa</option>
+						<option value="Hogar">Iztacalco</option>
+						<option value="Automotriz">Nezahualcoyotl</option>
+						<option value="Automotriz">Naucalpan</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="exampleFormControlTextarea1">Descripcion de su servicio</label>
+					<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+				  </div>
+				<button type="submit" class="btn btn-success">Guardar Cambios</button>
+			</form>
+		</div>
+
+
+		<!-- <p>{{getServ.catSer}}</p>  -->
+		<!-- div  id="listClie">
+			<div ng-repeat="getServ in scolV | filter:search" >
+			<div class="row">
+				<div class="col-xl-1">
+					<img style="width:90px; height:90px;" class="rounded-circle"  src="imgs/male.png">
+
+				</div>
+				<div class="col-xl-9">
+					<p>{{getServ.nameServ}}</p>
+					<p>{{getServ.nameZone}}</p>
+					
+				</div>
+				<div class="col-xl-2">
+					<p style="text-align: center;">$ {{getServ.servCosto}}</p> 
+					<button id="btnReg"  ng-click="addItem()" style="margin-top:10px;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Detalles</button>
+
+				</div>
+			</div>
+				<br>
+				<br>
+			</div>
+		</div>-->
+	</div>
+</div>
+
