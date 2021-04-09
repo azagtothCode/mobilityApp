@@ -1,0 +1,66 @@
+<div class="container-fluid">
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+    </ul>
+</div>
+<div class="container">
+    <div class="row" ng-controller="registrarServ">
+        <div class="col-md-6">
+            <div class="text-center">
+                <h1>
+                    Agregar Servicio
+                </h1>
+            </div>
+            <label for="nombreServ">Nombre del servicio*</label>
+            <input type="text" name="nombreServ" id="nombreServ" required>
+            <br>
+            <label for="tipoServ">Tipo de servicio*</label>
+            <select name="tipoServ" id="tipoServ" required>
+                <option value=""></option>
+                <option value="Arreglo de impresora"></option>
+                <option value="Limpieza de jardinera"></option>
+            </select>
+            <br>
+            <label for="tipoCosto">Tipo de costo*</label>
+            <select name="tipocosto" id="tipocosto">
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+            <br>
+            <label for="costoServ">Costo*</label>
+            <input type="number" name="costoServ" id="costoServ" required>
+            <br>
+            <label for="evidenciaServ">Foto o video del servicio</label>
+            <input type="file" name="evidenciaServ" id="evidenciaServ" required>
+            <br>
+            <h5>
+                <a href="">Limpiar formulario</a>
+            </h5>
+
+        </div>
+        <div class="col-md-6">
+            <div class="text-center">
+                <br>
+                <a href="" id="Regresar">Regresar</a>
+
+            </div>
+            <label for="DescripcionServ">Descripcion del servicio*</label>
+            <textarea name="descripcionServ" id="descripcionServ" cols="30" rows="10"></textarea>
+            <br>
+            <input type="submit" value="Guardar registro" id="btnguardarServ">
+        </div>
+    </div>
+
+
+</div>

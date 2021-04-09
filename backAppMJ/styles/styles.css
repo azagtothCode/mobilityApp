@@ -13,13 +13,13 @@ hr {
     background-color: #fff;
 }
 
-.col-md-5 {
+#colu2 {
     padding: 50px;
     background-color: #214478;
     color: #fff;
 }
 
-.col-md-7 {
+#colu1 {
     padding: 10px;
     background-color: #fff;
 }
@@ -91,4 +91,33 @@ select {
 
 #btnRecuEmail {
     width: 20%;
+}
+
+#Regresar {
+    margin-left: 85%;
+}
+
+#nombreServ,
+#tipoServ,
+#tipocosto,
+#costoServ,
+#evidenciaServ {
+    background: #2c5aa0;
+    color: #fff;
+}
+
+#descripcionServ {
+    width: 100%;
+    height: 435px;
+    background: #2c5aa0;
+    color: #fff;
+    opacity: 50%;
+    margin-top: 8px;
+}
+
+#btnguardarServ {
+    background: #2c5aa0;
+    opacity: 100%;
+    color: #fff;
+    padding-top: 10px;
 }
