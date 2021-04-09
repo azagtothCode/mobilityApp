@@ -11,250 +11,269 @@
         <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
     </div>
 </div>
-<div class="container" >
-            <div class="row">
-                <div class="col">
-                    IMAGENES
-                </div>
-                <div class="col">
-                    <div class="text-center">
-                        <h1>Información Personal</h1>
+<div class="container-fluid">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="card">
+                    <img class="card-img-top" src="imgs/female.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
                     </div>
-                    <form id="formRegistro" name="userForm" novalidate ng-init="user.inputType = 'COL'" >
-                        <div ng-init="formOther = 'true'" ng-show="formOther">
-                            <div class="row" >
-                                <div class="col">
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="text-center">
+                    <h1>Información Personal</h1>
+                    <hr>
+                </div>
+                <form id="formRegistro" name="userForm" novalidate ng-init="user.inputType = 'COL'">
+                    <div ng-init="formOther = 'true'" ng-show="formOther">
+                        <div class="row">
+                            <div class="col">
 
-                                    <label for="inputName">*Nombre(s)</label>
-                                    <input id="inputName" class="form-control" name="inputName" type="text" ng-model="user.inputName" required />
-                                    <span class="messages" ng-show="userForm.$submitted || userForm.inputName.$touched">
+                                <label for="inputName">*Nombre(s)</label>
+                                <input id="inputName" class="form-control" name="inputName" type="text" ng-model="user.inputName" required />
+                                <span class="messages" ng-show="userForm.$submitted || userForm.inputName.$touched">
                                         <span ng-show="userForm.inputName.$error.required">
                                             <div class="alert alert-danger" role="alert">
                                                 El campo Nombre es obligatorio
                                             </div>
                                         </span>
-                                    </span>
+                                </span>
 
-                                    <div class="row">
-                                        <div class="col">
-                                            <label for="inputApp">*Apellido Paterno</label>
-                                            <input id="inputApp" class="form-control" name="inputApp" type="text" ng-model="user.inputApp" required />
-                                            <span class="messages" ng-show="userForm.$submitted || userForm.inputApp.$touched">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="inputApp">*Apellido Paterno</label>
+                                        <input id="inputApp" class="form-control" name="inputApp" type="text" ng-model="user.inputApp" required />
+                                        <span class="messages" ng-show="userForm.$submitted || userForm.inputApp.$touched">
                                                 <span ng-show="userForm.inputApp.$error.required">
                                                     <div class="alert alert-danger" role="alert">
                                                         El campo Apellido Paterno es obligatorio
                                                     </div>
                                                 </span>
-                                            </span>
-                                        </div>
-                                        <div class="col">
-                                            <label for="inputApm">*Apellido Materno</label>
-                                            <input id="inputApm" class="form-control" name="inputApm" type="text" ng-model="user.inputApm" required />
-                                            <span class="messages" ng-show="userForm.$submitted || userForm.inputApm.$touched">
+                                        </span>
+                                    </div>
+                                    <div class="col">
+                                        <label for="inputApm">*Apellido Materno</label>
+                                        <input id="inputApm" class="form-control" name="inputApm" type="text" ng-model="user.inputApm" required />
+                                        <span class="messages" ng-show="userForm.$submitted || userForm.inputApm.$touched">
                                                 <span ng-show="userForm.inputApm.$error.required">
                                                     <div class="alert alert-danger" role="alert">
                                                         El campo Apellido Materno es obligatorio
                                                     </div>
                                                 </span>
-                                            </span>
-                                        </div>
+                                        </span>
                                     </div>
+                                </div>
 
-                                    <div class="row">
-                                        <div class="col">
-                                            <label for="inputBirth">*Fecha de nacimiento</label>
-                                            <input id="inputBirth" class="form-control" name="inputBirth" type="date" ng-model="user.inputBirth" required />
-                                            <span class="messages" ng-show="userForm.$submitted || userForm.inputBirth.$touched">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="inputBirth">*Fecha de nacimiento</label>
+                                        <input id="inputBirth" class="form-control" name="inputBirth" type="date" ng-model="user.inputBirth" required />
+                                        <span class="messages" ng-show="userForm.$submitted || userForm.inputBirth.$touched">
                                                 <span ng-show="userForm.inputBirth.$error.required">
                                                     <div class="alert alert-danger" role="alert">
                                                         El campo Fecha de nacimiento es obligatorio
                                                     </div>
                                                 </span>
-                                            </span>
-                                        </div>
-                                        <div class="col">
-                                            <label for="inputGender">*Genero</label>
-                                            <select id="inputGender" class="form-control" name="inputGender" ng-model="user.inputGender" required>
+                                        </span>
+                                    </div>
+                                    <div class="col">
+                                        <label for="inputGender">*Genero</label>
+                                        <select id="inputGender" class="form-control" name="inputGender" ng-model="user.inputGender" required>
                                                 <option value="H">Hombre</option>
                                                 <option value="M">Mujer</option>
                                                 <option value="O">Otro</option>
                                             </select>
-                        
-                                            <span class="messages" ng-show="userForm.$submitted || userForm.inputGender.$touched">
+
+                                        <span class="messages" ng-show="userForm.$submitted || userForm.inputGender.$touched">
                                                 <span ng-show="userForm.inputGender.$error.required">
                                                     <div class="alert alert-danger" role="alert">
                                                         El campo Genero es obligatorio
                                                     </div>
                                                 </span>
-                                            </span>
-                                        </div>
+                                        </span>
                                     </div>
+                                </div>
 
-                                    <div class="row">
-                                        <div class="col">
-                                            <label for="inputNac">*Estado de Nacimiento</label>
-                                            <input id="inputNac" class="form-control" name="inputNac" type="text" ng-model="user.inputNac" required />
-                                            <span class="messages" ng-show="userForm.$submitted || userForm.inputNac.$touched">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="inputNac">*Estado de Nacimiento</label>
+                                        <input id="inputNac" class="form-control" name="inputNac" type="text" ng-model="user.inputNac" required />
+                                        <span class="messages" ng-show="userForm.$submitted || userForm.inputNac.$touched">
                                                 <span ng-show="userForm.inputNac.$error.required">
                                                     <div class="alert alert-danger" role="alert">
                                                         El campo Nacionalidad es obligatorio
                                                     </div>
                                                 </span>
-                                            </span>
-                                        </div>
-                                        <div class="col">
-                                            <label for="inputINE">*Clave de elector</label>
-                                            <input id="inputINE" class="form-control" name="inputINE" type="text" ng-model="user.inputINE" required id="inputCURP" />
-                                            <span class="messages" ng-show="userForm.$submitted || userForm.inputINE.$touched">
+                                        </span>
+                                    </div>
+                                    <div class="col">
+                                        <label for="inputINE">*Clave de elector</label>
+                                        <input id="inputINE" class="form-control" name="inputINE" type="text" ng-model="user.inputINE" required id="inputCURP" />
+                                        <span class="messages" ng-show="userForm.$submitted || userForm.inputINE.$touched">
                                                 <span ng-show="userForm.inputINE.$error.required">
                                                     <div class="alert alert-danger" role="alert">
                                                         El campo INE es obligatorio
                                                     </div>
                                                 </span>
-                                            </span>
-                                        </div>
+                                        </span>
                                     </div>
-                
-                                    <label for="inputCURP">*CURP</label>
-                                    <input class="form-control" name="inputCURP" id="inputCURP" oninput="validarInput(this)" type="text" ng-model="user.inputCURP" required ng-init="inputCURP = true" />
-                                    <span class="messages" ng-show="userForm.$submitted || userForm.inputCURP.$touched">
+                                </div>
+
+                                <label for="inputCURP">*CURP</label>
+                                <input class="form-control" name="inputCURP" id="inputCURP" oninput="validarInput(this)" type="text" ng-model="user.inputCURP" required ng-init="inputCURP = true" />
+                                <span class="messages" ng-show="userForm.$submitted || userForm.inputCURP.$touched">
                                         <span ng-show="userForm.inputCURP.$error.required">
                                             <div class="alert alert-danger" role="alert">
                                                 El campo CURP es obligatorio
                                             </div>
                                         </span>
-                                    <div ng-if="inputCURP=true">
+                                <div ng-if="inputCURP=true">
+                                    <div class="alert alert-danger" role="alert">
                                         <pre id="resultado">Debe ser llenado correctamente</pre>
                                     </div>
-                                    </span>
-
                                 </div>
-                            </div>
-                            <div style="margin-top: 20px;"  class="row">
-                                <div class="col-lg-12">
-                                    <button id="btnIng" class="btn btn-primary btn-lg btn-block" ng-click="validateUser(user)">Validar Información</button>
-                                    <a class="btn btn-link btn-lg btn-block" href="#!/" role="button">Iniciar Sesión</a>
-                                    <a class="btn btn-link btn-lg btn-block" href="#" role="button">Aviso de Privacidad</a>
-                                </div>
+                                </span>
+                                <br>
                             </div>
                         </div>
-                        <div ng-show="formHidden">
-                            <div class="row"  >
-                                <div class="col">
-                                    <div class="row">
-                                        <div class="col">
-                                            <label for="inputMuni">*Alcaldia ó Municipio</label>
-                                            <select id="inputMuni" class="form-control" name="inputMuni" ng-model="user.inputMuni" id="inputMuni" required>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="text-center">
+                                    <input type="checkbox" name="acepta" id="btnAcep">Acepta Terminos y condiciones
+                                    <br>
+                                    <button id="btnIngValida" ng-click="validateUser(user)">Validar Información</button>
+                                    <br>
+                                    <a id="btnIni" href="#!/" role="button">Iniciar Sesión</a>
+                                    <br>
+                                    <a id="btnAviso" href="#" role="button">Aviso de Privacidad</a>
+                                    <hr>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-show="formHidden">
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="inputMuni">*Alcaldia ó Municipio</label>
+                                        <select id="inputMuni" class="form-control" name="inputMuni" ng-model="user.inputMuni" id="inputMuni" required>
                                                 <option value="lvaro Obregón">Alvaro Obregón</option>
                                                 <option value="Nezahualcoyotl">Nezahualcoyotl</option>
                                                 <option value="Iztacalco">Iztacalco</option>
                                             </select>
-                                            <span class="messages" ng-show=" userForm.inputMuni.$touched">
+                                        <span class="messages" ng-show=" userForm.inputMuni.$touched">
                                                 <span ng-show="userForm.inputMuni.$error.required">
                                                     <div class="alert alert-danger" role="alert">
                                                         El campo Municipio es obligatorio
                                                     </div>
                                                 </span>
-                                            </span>
-                                        </div>
-                                        <div class="col">
-                                            <label for="inputCol">*Colonia</label>
-                                            <select id="inputCol" class="form-control" name="inputCol" ng-model="user.inputCol" required>
+                                        </span>
+                                    </div>
+                                    <div class="col">
+                                        <label for="inputCol">*Colonia</label>
+                                        <select id="inputCol" class="form-control" name="inputCol" ng-model="user.inputCol" required>
                                                 <option value="Anzures">Anzures</option>
                                                 <option value="La paz">La paz</option>
                                                 <option value="Lago Azul">Lago Azul</option>
                                             </select>
-                                            <span class="messages" ng-show="userForm.inputCol.$touched">
+                                        <span class="messages" ng-show="userForm.inputCol.$touched">
                                                 <span ng-show="userForm.inputCol.$error.required">
                                                     <div class="alert alert-danger" role="alert">
                                                         El campo Colonia es obligatorio
                                                     </div>
                                                 </span>
-                                            </span>
-                                        </div>
+                                        </span>
                                     </div>
+                                </div>
 
 
-                                    <div class="row">
-                                        <div class="col">
-                                            <label for="inputStreet">*Calle</label>
-                                        
-                                            <input id="inputStreet" class="form-control" name="inputStreet" type="text" ng-model="user.inputStreet" required/>
-                                            <span class="messages" ng-show="userForm.inputStreet.$touched">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="inputStreet">*Calle</label>
+
+                                        <input id="inputStreet" class="form-control" name="inputStreet" type="text" ng-model="user.inputStreet" required/>
+                                        <span class="messages" ng-show="userForm.inputStreet.$touched">
                                                 <span ng-show="userForm.inputStreet.$error.required">
                                                     <div class="alert alert-danger" role="alert">
                                                         El campo Calle es obligatorio
                                                     </div>
                                                 </span>
-                                            </span>
-                                        </div>
-                                        <div class="col">
-                                            <label for="inputCP">*Codigo Postal</label>
-                                
-                                            <input id="inputCP" class="form-control" name="inputCP" type="text" ng-model="user.inputCP" required />
-                                            <span class="messages" ng-show="userForm.inputCP.$touched">
+                                        </span>
+                                    </div>
+                                    <div class="col">
+                                        <label for="inputCP">*Codigo Postal</label>
+
+                                        <input id="inputCP" class="form-control" name="inputCP" type="text" ng-model="user.inputCP" required />
+                                        <span class="messages" ng-show="userForm.inputCP.$touched">
                                                 <span ng-show="userForm.inputCP.$error.required">
                                                     <div class="alert alert-danger" role="alert">
                                                         El campo Codigo Postal es obligatorio
                                                     </div>
                                                 </span>
-                                            </span>
-                                        </div>
-                                      </div>
+                                        </span>
+                                    </div>
+                                </div>
 
-                                    <div class="row">
-                                        <div class="col">
-                                            <label for="inputTel">*Télefono</label>
-                                            
-                                            <input id="inputTel" class="form-control" name="inputTel" type="text" ng-model="user.inputTel" required />
-                                            <span class="messages" ng-show="userForm.inputTel.$touched">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="inputTel">*Télefono</label>
+
+                                        <input id="inputTel" class="form-control" name="inputTel" type="text" ng-model="user.inputTel" required />
+                                        <span class="messages" ng-show="userForm.inputTel.$touched">
                                                 <span ng-show="userForm.inputTel.$error.required">
                                                     <div class="alert alert-danger" role="alert">
                                                         El campo Télefono es obligatorio
                                                     </div>
                                                 </span>
-                                            </span>
-                                        </div>
-                                        <div class="col">
-                                            <label for="inputOffice">*Oficio ó Profesión</label>
-                                            <select id="inputOffice" class="form-control" name="inputOffice" ng-model="user.inputOffice" required>
+                                        </span>
+                                    </div>
+                                    <div class="col">
+                                        <label for="inputOffice">*Oficio ó Profesión</label>
+                                        <select id="inputOffice" class="form-control" name="inputOffice" ng-model="user.inputOffice" required>
                                                 <option value="Carpintero">Carpintero</option>
                                                 <option value="Ingeniero en Sistemas">Ingeniero en Sistemas</option>
                                                 <option value="Cocinero">Cocinero</option>
                                             </select>
-                                            <span class="messages" ng-show="userForm.inputOffice.$touched">
+                                        <span class="messages" ng-show="userForm.inputOffice.$touched">
                                                 <span ng-show="userForm.inputOffice.$error.required">
                                                     <div class="alert alert-danger" role="alert">
                                                         El campo Colonia es obligatorio
                                                     </div>
                                                 </span>
-                                            </span>
-                                        </div>
+                                        </span>
                                     </div>
-                
-                                    <label for="inputMail">*Correo Eléctronico</label>
-                                
-                                    <input id="inputMail" class="form-control" name="inputMail" type="text" ng-model="user.inputMail" required />
-                                    <span class="messages" ng-show="userForm.inputMail.$touched">
+                                </div>
+
+                                <label for="inputMail">*Correo Eléctronico</label>
+
+                                <input id="inputMail" class="form-control" name="inputMail" type="text" ng-model="user.inputMail" required />
+                                <span class="messages" ng-show="userForm.inputMail.$touched">
                                         <span ng-show="userForm.inputMail.$error.required">
                                             <div class="alert alert-danger" role="alert">
                                                 El campo Correo Electronico es obligatorio
                                             </div>
                                         </span>
-                                    </span>
-                
-                                    <label for="inputPass">*Contraseña</label>
-                                
-                                    <input id="inputPass" class="form-control" name="inputPass" type="password" ng-model="user.inputPass" required  />
-                                    <span class="messages" ng-show="userForm.inputPass.$touched">
+                                </span>
+
+                                <label for="inputPass">*Contraseña</label>
+
+                                <input id="inputPass" class="form-control" name="inputPass" type="password" ng-model="user.inputPass" required />
+                                <span class="messages" ng-show="userForm.inputPass.$touched">
                                         <span ng-show="userForm.inputPass.$error.required">
                                             <div class="alert alert-danger" role="alert">
                                                 El campo Calle es obligatorio
                                             </div>
                                         </span>
-                                    </span>
-                
-                                    <!-- <label for="INE">*Validar Contraseña</label>
+                                </span>
+                                <br>
+
+                                <!-- <label for="INE">*Validar Contraseña</label>
                                 
                                     <input class="form-control" name="inputStreet" type="text" ng-model="user.inputStreet" required id="inputStreet" />
                                     <span class="messages" ng-show="userForm.$submitted || userForm.inputStreet.$touched">
@@ -264,30 +283,36 @@
                                             </div>
                                         </span>
                                     </span> -->
-                
-                                
-                            </div>
-                            </div>
-                            <div style="margin-top: 20px;" class="row">
-                                <div class="col-lg-12">
-                                    <button id="btnIng" type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid || userForm.$pristine" ng-click="insertUserCol(user)">Registrar</button>
-                                    <a class="btn btn-link btn-lg btn-block" href="#!/" role="button">Iniciar Sesión</a>
-                                    <a class="btn btn-link btn-lg btn-block" href="#" role="button">Aviso de Privacidad</a>
-                                </div>
+
+
                             </div>
                         </div>
-                    </form>
-                </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="text-center">
+                                    <button id="btnIngSubmit" type="submit" ng-disabled="userForm.$invalid || userForm.$pristine" ng-click="insertUserCol(user)">Registrar</button>
+                                    <br>
+                                    <a id="btnAviso" href="#" role="button">Aviso de Privacidad</a>
+                                    <br>
+                                    <a id="btnIni" href="#!/" role="button">Iniciar Sesión</a>
+                                    <hr>
+                                </div>
 
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
 
+        </div>
+
+    </div>
 </div>
+
 
 <!-- SCRIPT PARA DAR FUNCION AL EVENTO CUANDO SE DE CLIC EN REGRESAR -->
 <script>
-
-    $("#volver").click(function(){
+    $("#volver").click(function() {
         $('.modal-backdrop').remove();
     });
-
 </script>

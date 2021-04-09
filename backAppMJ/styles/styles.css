@@ -1,0 +1,94 @@
+.container-fluid {
+    padding: 30px;
+    background-color: #2c5aa0;
+}
+
+img {
+    width: 100%;
+    padding: 50px
+}
+
+hr {
+    width: 100%;
+    background-color: #fff;
+}
+
+.col-md-5 {
+    padding: 50px;
+    background-color: #214478;
+    color: #fff;
+}
+
+.col-md-7 {
+    padding: 10px;
+    background-color: #fff;
+}
+
+.card {
+    width: 100%;
+    background: #fff;
+}
+
+input {
+    opacity: 50%;
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    padding: 8px;
+}
+
+select {
+    opacity: 50%;
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    padding: 8px;
+}
+
+#btnIngValida,
+#btnIngRegistrarse,
+#btnIngSubmit {
+    opacity: 50%;
+    width: 95%;
+    padding: 8px 16px;
+    margin-top: 10px;
+    border-radius: 25px;
+    display: block;
+    color: #000;
+    background-color: #37C8AB;
+    margin-left: 8px;
+}
+
+#btnIni,
+#btnAviso,
+#btnAcep,
+#btnReg,
+#btnOlv,
+#btnTer {
+    color: #fff;
+}
+
+.card-body {
+    background: #37C8AB;
+}
+
+.modal-header {
+    background: #214478;
+    color: #fff;
+}
+
+.modal-body {
+    color: #000;
+}
+
+.close {
+    color: #fff;
+}
+
+#recuperaEmail {
+    width: 50%;
+}
+
+#btnRecuEmail {
+    width: 20%;
+}
